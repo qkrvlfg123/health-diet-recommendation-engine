@@ -18,6 +18,13 @@ AI 에이전트와 통화하며 주문하고 본인의 질환·복용약·알레
 
 이 저장소는 그중 **본인이 맡은 DA 파트**만 담고 있습니다.
 
+### 발표자료
+
+- [`docs/KioBridge_발표자료_그랜토리해커톤.pptx`](./docs/KioBridge_발표자료_그랜토리해커톤.pptx)
+- 출처: **그랜토리 해커톤 발표자료** (2026 스타트업 영그라운드 MVP 개발 해커톤 · 팀 그랜토리)
+- 서비스 전체(문제 정의 · 사용자 플로우 · 추천 엔진 · 검증 결과)를 다룬 팀 공동 발표 데크입니다.
+  화면 속 이름·전화번호는 데모용 가상 페르소나이며, 외부 공유 링크(데이터 시트)는 제거했습니다.
+
 ---
 
 ## 이게 뭔가요
@@ -118,8 +125,10 @@ print_report(Profile(
 ## 파일 구성
 
 ```
-kiobridge-health-ruleset/
+health-diet-recommendation-engine/
 ├── README.md
+├── docs/
+│   └── KioBridge_발표자료_그랜토리해커톤.pptx  # 해커톤 발표 데크
 ├── recommend.py                 # 규칙 적용 데모 (하드필터→건강필터→추천+이유)
 ├── demo_output.txt              # 데모 실행 결과
 └── data/
