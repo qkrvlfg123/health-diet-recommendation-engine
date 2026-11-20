@@ -2,7 +2,8 @@
   "_설명": [
     "보완 규칙(rules_supplement.json)의 근거 문헌 목록.",
     "확인수준: 이 작업에서 실제로 확인한 범위를 적었다. 전문을 읽은 것이 아니라 PubMed 초록·검색 요약으로 확인한 경우가 대부분이므로, 인용 전에 원문 대조가 필요하다.",
-    "연구설계를 함께 적은 이유: 관찰 연구·증례 보고·전문가 권고는 근거의 무게가 다르고, 그에 따라 규칙의 근거수준을 정했기 때문이다."
+    "연구설계를 함께 적은 이유: 관찰 연구·증례 보고·전문가 권고는 근거의 무게가 다르고, 그에 따라 규칙의 근거수준을 정했기 때문이다.",
+    "근거수준 기준: HIGH = 무작위 시험(또는 그 메타분석), 의약품 허가사항·규제기관 안내, 진료지침의 강한 권고(Class I). MEDIUM = 관찰 연구, 조건부 권고, 전문가 합의, 소규모 약동학 연구, 증례 보고, 서술적 종설. 근거수준은 문헌의 연구설계만으로 정하고, 메뉴 판정의 불확실성은 규칙의 '조건/예외'에 따로 적는다."
   ],
   "sources": [
     {
@@ -91,7 +92,7 @@
       "citation": "FitzGerald JD, Dalbeth N, Mikuls T, et al. 2020 American College of Rheumatology Guideline for the Management of Gout. Arthritis Care Res (Hoboken). 2020;72(6):744-760.",
       "pmid": "",
       "url": "https://doi.org/10.1002/acr.24180",
-      "연구설계": "진료지침",
+      "연구설계": "진료지침 (조건부 권고, 근거 확실성 낮음)",
       "핵심내용": "모든 통풍 환자에게 알코올·퓨린·고과당 옥수수시럽 섭취 제한을 조건부 권고 (근거 확실성: 알코올 낮음, 퓨린 낮음, 고과당시럽 매우 낮음).",
       "확인수준": "지침 표와 2차 요약으로 확인"
     },
@@ -139,6 +140,114 @@
       "연구설계": "근거 요약(1차 진료용)",
       "핵심내용": "티아지드 이뇨제 사용자 약 4%에서 저칼륨혈증(<3.2 mmol/L)이 발생한다. 즉 티아지드는 칼륨을 올리는 것이 아니라 낮춘다.",
       "확인수준": "검색 요약으로 확인"
+    },
+    {
+      "id": "E016",
+      "citation": "U.S. Food and Drug Administration. Grapefruit Juice and Some Drugs Don't Mix (Consumer Update).",
+      "pmid": "",
+      "url": "https://www.fda.gov/consumers/consumer-updates/grapefruit-juice-and-some-drugs-dont-mix",
+      "연구설계": "규제기관 안내",
+      "핵심내용": "자몽주스와 상호작용하는 스타틴의 예로 심바스타틴과 아토르바스타틴을 든다. 일부 스타틴은 자몽이 분해 효소를 막아 체내 약물량이 늘어난다.",
+      "확인수준": "검색 요약으로 확인. 로바스타틴 포함, 프라바스타틴·로수바스타틴 제외는 2차 자료(GoodRx 등)로만 확인"
+    },
+    {
+      "id": "E017",
+      "citation": "Roerecke M, Kaczorowski J, Tobe SW, et al. The effect of a reduction in alcohol consumption on blood pressure: a systematic review and meta-analysis. Lancet Public Health. 2017;2(2):e108-e120.",
+      "pmid": "29253389",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29253389",
+      "연구설계": "임상시험 36개(2,865명)의 메타분석",
+      "핵심내용": "하루 6잔 이상 마시던 사람이 음주를 줄이면 수축기 -5.50 mmHg, 이완기 -3.97 mmHg. 하루 2잔 이하에서는 줄여도 유의한 혈압 감소가 없었다.",
+      "확인수준": "검색 요약으로 확인. 공저자 명단은 원문에서 확인 필요"
+    },
+    {
+      "id": "E018",
+      "citation": "Grundy SM, Stone NJ, et al. 2018 AHA/ACC Guideline on the Management of Blood Cholesterol. (ACC 요약: Hypertriglyceridemia Management According to the 2018 AHA/ACC Guideline)",
+      "pmid": "",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2019/01/11/07/39/hypertriglyceridemia-management-according-to-the-2018-aha-acc-guideline",
+      "연구설계": "진료지침 (Class I, 근거 B-NR)",
+      "핵심내용": "중성지방이 지속적으로 높거나 상승하는 경우 초저지방 식이, 정제 탄수화물과 알코올 회피를 Class I로 권고.",
+      "확인수준": "ACC 요약으로 확인. 지침 원문의 문구는 대조 필요"
+    },
+    {
+      "id": "E019",
+      "citation": "Micha R, Wallace SK, Mozaffarian D. Red and processed meat consumption and risk of incident coronary heart disease, stroke, and diabetes mellitus: a systematic review and meta-analysis. Circulation. 2010;121(21):2271-2283.",
+      "pmid": "20479151",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20479151/",
+      "연구설계": "관찰 연구 20개(약 122만 명)의 메타분석",
+      "핵심내용": "가공육 하루 50 g당 관상동맥질환 위험 42% 증가(RR 1.42, 95% CI 1.07-1.89), 당뇨병 19% 증가. 가공하지 않은 적색육은 관상동맥질환과 관련이 없었다(RR 1.00).",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E020",
+      "citation": "Cook NR, Cutler JA, Obarzanek E, et al. Long term effects of dietary sodium reduction on cardiovascular disease outcomes: observational follow-up of the trials of hypertension prevention (TOHP). BMJ. 2007;334(7599):885.",
+      "pmid": "17449506",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17449506/",
+      "연구설계": "무작위 시험 2개의 장기 관찰 추적",
+      "핵심내용": "나트륨 감량 중재군의 심혈관 사건 위험이 25% 낮았다(RR 0.75, 95% CI 0.57-0.99). 사망률 차이는 유의하지 않았다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 신뢰구간 상한이 1에 가까워 근거는 중간 정도"
+    },
+    {
+      "id": "E021",
+      "citation": "Gertz BJ, Holland SD, Kline WF, et al. Studies of the oral bioavailability of alendronate. Clin Pharmacol Ther. 1995;58(3):288-298.",
+      "pmid": "7554702",
+      "url": "https://www.qxmd.com/r/7554702",
+      "연구설계": "임상시험 (생체이용률)",
+      "핵심내용": "알렌드로네이트를 블랙커피나 오렌지주스와 함께 복용하면 흡수가 약 60% 감소. 식사와 동시 또는 식후 2시간 내 복용 시 85% 이상 감소.",
+      "확인수준": "초록 요약으로 확인"
+    },
+    {
+      "id": "E022",
+      "citation": "Benvenga S, Bartolone L, Pappalardo MA, et al. Altered intestinal absorption of L-thyroxine caused by coffee. Thyroid. 2008;18(3):293-301.",
+      "pmid": "18341376",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18341376/",
+      "연구설계": "소규모 임상 연구 (환자 8명, 지원자 9명)",
+      "핵심내용": "레보티록신을 커피와 함께 복용하면 흡수가 떨어졌다. 1시간 간격을 두면 영향이 없었다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E023",
+      "citation": "Singh N, Singh PN, Hershman JM. Effect of calcium carbonate on the absorption of levothyroxine. JAMA. 2000;283(21):2822-2825.",
+      "pmid": "10838651",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10838651/",
+      "연구설계": "전향적 연구 (환자 20명)",
+      "핵심내용": "탄산칼슘을 레보티록신과 함께 3개월 복용하면 T4가 낮아지고 TSH가 올랐다. 20%에서 TSH가 정상 범위를 넘었다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E024",
+      "citation": "Healy DP, Polk RE, Kanawati L, et al. Interaction between oral ciprofloxacin and caffeine in normal volunteers. Antimicrob Agents Chemother. 1989;33(4):474-478.",
+      "pmid": "2729942",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC172463/",
+      "연구설계": "약동학 연구 (건강한 남성 10명)",
+      "핵심내용": "시프로플록사신이 카페인의 청소율을 낮춰 반감기와 노출량을 늘렸다(반감기 약 5.2 → 8.2시간). 임상적 의미는 확정되지 않았다고 저자들이 밝힘.",
+      "확인수준": "초록 요약으로 확인. 공저자 명단과 수치는 원문에서 확인 필요"
+    },
+    {
+      "id": "E025",
+      "citation": "Hypertensive episode associated with phenelzine and tap beer — a reanalysis of the role of pressor amines in beer. J Clin Psychopharmacol. 1994.",
+      "pmid": "",
+      "url": "https://scilit.com/publications/a047e05c44d8cfe85fa2b67f0e138548",
+      "연구설계": "증례 보고 + 맥주 98개 시료의 티라민 분석",
+      "핵심내용": "페넬진 복용 환자가 생맥주를 마신 뒤 고혈압 위기. 티라민 10 mg/L를 넘은 4개 시료는 모두 생맥주(26~113 mg/L). 병·캔맥주는 적당량이면 안전해 보인다고 결론.",
+      "확인수준": "초록 요약으로 확인. 저자·권·쪽수는 확인하지 못함"
+    },
+    {
+      "id": "E026",
+      "citation": "Shulman KI, Tailor SA, Walker SE, Gardner DM. Tap (draft) beer and monoamine oxidase inhibitor dietary restrictions. Can J Psychiatry. 1997.",
+      "pmid": "9114949",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9114949/",
+      "연구설계": "증례 보고 + 분석",
+      "핵심내용": "소량의 생맥주 섭취 후 고혈압 위기 두 번째 증례. MAOI 식이에서 모든 생맥주를 제한해야 한다고 주장.",
+      "확인수준": "PubMed 기록 요약으로 확인"
+    },
+    {
+      "id": "E027",
+      "citation": "Estruch R, Ros E, Salas-Salvadó J, et al. Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. N Engl J Med. 2018;378(25):e34.",
+      "pmid": "",
+      "url": "https://doi.org/10.1056/NEJMoa1800389",
+      "연구설계": "무작위 시험(PREDIMED)의 재분석 게재본",
+      "핵심내용": "지중해식 식단군의 주요 심혈관 사건 위험이 저지방 대조군보다 낮았다(올리브유군 HR 0.69, 견과류군 HR 0.72).",
+      "확인수준": "초록 일부로 확인. 일부 기관의 무작위 배정 문제로 2013년 논문을 철회하고 재게재한 것임. 중재는 올리브유·견과류 보충이지 채소 메뉴 자체가 아님"
     }
   ]
 }

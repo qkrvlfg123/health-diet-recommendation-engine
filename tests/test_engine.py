@@ -131,6 +131,40 @@ def test_supplement_rules_fill_former_gaps():
     assert "DR020" in sources(ev("자몽에이드", drug_ids=["RX017"]))            # 자몽–콜히친 (E012)
 
 
+def test_v32_rules_from_literature():
+    assert "R036" in sources(ev("맥주", diseases=["고혈압"]))                  # 알코올–혈압 (E017)
+    assert "R037" in sources(ev("김치찌개", diseases=["심혈관질환"]))          # 나트륨–심혈관 (E020)
+    e = ev("시금치나물", diseases=["심혈관질환"])                              # 채소 권장 (E027)
+    assert "R039" in sources(e) and e["tier"] == "RECOMMENDED"
+    assert "DR022" in sources(ev("아메리카노", drug_ids=["RX009"]))            # 시프로플록사신–카페인 (E024)
+    assert "DR023" in sources(ev("맥주", drug_ids=["RX005"]))                  # MAO억제제–생맥주 (E025, E026)
+
+
+def test_bisphosphonate_coffee_is_timing_advice():
+    """골다공증약–커피는 흡수 문제라 복용 시간 안내(E021). 감점하지 않는다."""
+    e = ev("아메리카노", drug_ids=["RX010"])
+    assert [x["kind"] for x in e["reasons"]] == ["DRUG_TIMING"] and e["score"] == r.BASE_SCORE
+
+
+def test_colchicine_grapefruit_does_not_apply_to_urate_lowering_drugs():
+    """자몽 상호작용은 콜히친에만 해당하므로 약물군을 분리했다(E012)."""
+    assert "DR020" in sources(ev("자몽에이드", drug_ids=["RX017"]))
+    assert not ev("자몽에이드", drug_ids=["RX018"])["reasons"]
+    # 알코올 제한은 두 약물군 모두 해당
+    assert "DR019" in sources(ev("맥주", drug_ids=["RX017"])) and "DR024" in sources(ev("맥주", drug_ids=["RX018"]))
+
+
+def test_evidence_level_follows_study_design():
+    """근거수준은 연구설계로만 정한다: 관찰 연구·증례·전문가 합의는 HIGH가 될 수 없다."""
+    weak = ("코호트", "관찰", "증례", "종설", "약동학", "전문가 합의", "근거등급 E", "조건부")
+    s = r.SUPPLEMENT
+    for rule in s["disease_rules_add"] + s["drug_rules_add"]:
+        first = rule["source_id"].split("|")[0]
+        design = r.EVIDENCE[first]["연구설계"]
+        if any(w in design for w in weak):
+            assert rule["근거수준"] == "MEDIUM", (rule.get("rule_id") or rule.get("drug_rule_id"), design)
+
+
 def test_levodopa_protein_is_timing_advice():
     """파킨슨약–고단백 식사는 제한이 아니라 복용 시간 조절(E013). 감점하지 않는다."""
     e = ev("삼겹살구이", drug_ids=["RX006"])
