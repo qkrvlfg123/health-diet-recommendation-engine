@@ -196,6 +196,47 @@ def test_every_supplement_item_cites_existing_evidence():
         assert it["이유"] and all(i in r.EVIDENCE for i in it["source_id"].split("|") if i)
 
 
+# ---------------------------------------------------------------- 원본 규칙의 문헌 검토
+
+ORIGINAL_DISEASE = [f"R{i:03d}" for i in range(1, 33)]
+ORIGINAL_DRUG = [f"DR{i:03d}" for i in range(1, 18)]
+
+
+def test_review_covers_every_original_rule():
+    review = r._load("rule_review.json")
+    assert [x["id"] for x in review["disease_rules"]] == ORIGINAL_DISEASE
+    assert [x["id"] for x in review["drug_rules"]] == ORIGINAL_DRUG
+
+
+def test_review_verdicts_are_consistent():
+    """판정과 근거수준 변화가 맞아야 하고, 근거 문헌 없이 등급을 바꾸지 않는다."""
+    rank = {"MEDIUM": 1, "HIGH": 2}
+    review = r._load("rule_review.json")
+    for x in review["disease_rules"] + review["drug_rules"]:
+        diff = rank[x["검토_근거수준"]] - rank[x["원본_근거수준"]]
+        expected = {"상향": 1, "하향": -1}.get(x["판정"], 0)
+        assert diff == expected, x["id"]
+        ids = [i for i in x["source_id"].split("|") if i]
+        assert all(i in r.EVIDENCE for i in ids), x["id"]
+        if x["판정"] in ("상향", "하향"):
+            assert ids, f"{x['id']}: 근거 문헌 없이 등급을 바꿀 수 없다"
+        if x["판정"] == "유지(근거 미확인)":
+            assert diff == 0, x["id"]
+
+
+def test_engine_uses_reviewed_levels():
+    by = {x["rule_id"]: x for x in r.DISEASE_RULES}
+    assert by["R005"]["근거수준"] == "HIGH"       # DASH 무작위 시험 (E029)
+    assert by["R019"]["근거수준"] == "MEDIUM"     # 식이 칼슘은 골절과 관련 없음 (E035)
+    assert by["R025"]["근거수준"] == "MEDIUM"     # 통풍–알코올은 코호트·조건부 권고 (E037, E010)
+
+
+def test_diabetes_drug_rule_does_not_fire_on_desserts():
+    """원본 버그: DR009의 태그 ADDED_SUGAR 때문에 약과·치즈케이크에 '당뇨약과 홍삼' 문구가 붙었다."""
+    for name in ["약과", "치즈케이크", "연유라떼"]:
+        assert "DR009" not in sources(ev(name, drug_ids=["RX008"])), name
+
+
 # ---------------------------------------------------------------- 데이터 정합성
 
 def test_rule_tag_map_refers_to_existing_rules_and_tags():

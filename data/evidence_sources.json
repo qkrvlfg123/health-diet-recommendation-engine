@@ -248,6 +248,249 @@
       "연구설계": "무작위 시험(PREDIMED)의 재분석 게재본",
       "핵심내용": "지중해식 식단군의 주요 심혈관 사건 위험이 저지방 대조군보다 낮았다(올리브유군 HR 0.69, 견과류군 HR 0.72).",
       "확인수준": "초록 일부로 확인. 일부 기관의 무작위 배정 문제로 2013년 논문을 철회하고 재게재한 것임. 중재는 올리브유·견과류 보충이지 채소 메뉴 자체가 아님"
+    },
+    {
+      "id": "E028",
+      "citation": "He FJ, Li J, MacGregor GA. Effect of longer term modest salt reduction on blood pressure: Cochrane systematic review and meta-analysis of randomised trials. BMJ. 2013;346:f1325.",
+      "pmid": "23633321",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23633321/",
+      "연구설계": "무작위 시험 34개(3,230명)의 메타분석",
+      "핵심내용": "소금을 하루 4.4 g 줄이면 수축기 -4.18 mmHg. 고혈압 환자에서는 수축기 -5.39, 이완기 -2.82 mmHg.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E029",
+      "citation": "Appel LJ, Moore TJ, Obarzanek E, et al. A clinical trial of the effects of dietary patterns on blood pressure (DASH). N Engl J Med. 1997;336(16):1117-1124.",
+      "pmid": "9099655",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9099655/",
+      "연구설계": "무작위 급식 시험 (8주)",
+      "핵심내용": "과일·채소 식단은 대조군보다 수축기 2.8 mmHg 낮춤. 저지방 유제품을 더한 복합 식단은 고혈압 환자에서 수축기 11.4, 이완기 5.5 mmHg 낮춤.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E030",
+      "citation": "Malik VS, Popkin BM, Bray GA, et al. Sugar-sweetened beverages and risk of metabolic syndrome and type 2 diabetes: a meta-analysis. Diabetes Care. 2010;33(11):2477-2483.",
+      "pmid": "20693348",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20693348/",
+      "연구설계": "전향적 코호트 메타분석 (310,819명)",
+      "핵심내용": "가당음료를 가장 많이 마시는 군(하루 1~2회)은 가장 적게 마시는 군보다 제2형 당뇨병 발생 위험이 26% 높았다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 발생 위험 연구"
+    },
+    {
+      "id": "E031",
+      "citation": "Hu EA, Pan A, Malik V, Sun Q. White rice consumption and risk of type 2 diabetes: meta-analysis and systematic review. BMJ. 2012;344:e1454.",
+      "pmid": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22422870/",
+      "연구설계": "전향적 코호트 메타분석",
+      "핵심내용": "흰쌀밥 하루 1회 섭취 증가당 제2형 당뇨병 상대위험 1.11(1.08-1.14). 아시아인에서 더 뚜렷.",
+      "확인수준": "검색 요약으로 확인. PMID는 원문에서 확인 필요. 발생 위험 연구"
+    },
+    {
+      "id": "E032",
+      "citation": "Reynolds AN, Akerman AP, Mann J. Dietary fibre and whole grains in diabetes management: Systematic review and meta-analyses. PLoS Med. 2020;17(3):e1003053.",
+      "pmid": "32142510",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32142510",
+      "연구설계": "무작위 시험 42개(당뇨병·당뇨병 전단계 1,789명)의 메타분석",
+      "핵심내용": "식이섬유 섭취를 늘리면 HbA1c가 2.00 mmol/mol(약 0.2%p) 감소. 이질성이 크고 12개월 이상 시험은 부족.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E033",
+      "citation": "Mozaffarian D, Katan MB, Ascherio A, Stampfer MJ, Willett WC. Trans fatty acids and cardiovascular disease. N Engl J Med. 2006;354(15):1601-1613.",
+      "pmid": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2639783",
+      "연구설계": "종설 (전향적 코호트 4개 종합 포함)",
+      "핵심내용": "트랜스지방 섭취가 에너지의 2% 늘면 관상동맥질환 위험이 약 23% 높았다(RR 1.23, 1.11-1.37).",
+      "확인수준": "서지사항은 확인. RR 1.23 수치는 후속 요약 문헌에서 확인했고 2006년 원문에서 직접 확인하지 못함"
+    },
+    {
+      "id": "E034",
+      "citation": "Brown L, Rosner B, Willett WW, Sacks FM. Cholesterol-lowering effects of dietary fiber: a meta-analysis. Am J Clin Nutr. 1999;69(1):30-42.",
+      "pmid": "",
+      "url": "https://www.scilit.net/publications/54fa5a617fdb6158e2f040ec77300d4e",
+      "연구설계": "대조 시험 67개의 메타분석",
+      "핵심내용": "수용성 식이섬유 하루 2~10 g은 총콜레스테롤과 LDL을 작지만 유의하게 낮춤(LDL -0.057 mmol/L per g).",
+      "확인수준": "검색 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E035",
+      "citation": "Bolland MJ, Leung W, Tai V, et al. Calcium intake and risk of fracture: systematic review. BMJ. 2015;351:h4580.",
+      "pmid": "",
+      "url": "https://www.bmj.com/content/351/bmj.h4580/related",
+      "연구설계": "체계적 문헌고찰 (코호트 + 무작위 시험)",
+      "핵심내용": "식이 칼슘 섭취는 골절 위험과 관련이 없었고, 식품으로 칼슘을 늘리면 골절이 예방된다는 시험 근거가 없다. 보충제 시험 중 비뚤림이 낮은 것에서는 효과가 없었다.",
+      "확인수준": "검색 요약으로 확인. 공저자 명단은 원문에서 확인 필요"
+    },
+    {
+      "id": "E036",
+      "citation": "Kanis JA, Johansson H, Johnell O, et al. Alcohol intake as a risk factor for fracture. Osteoporos Int. 2005;16(7):737-742.",
+      "pmid": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15455194/",
+      "연구설계": "전향적 코호트 종합",
+      "핵심내용": "하루 2단위 이하에서는 위험 증가가 없었다. 그 이상에서는 골다공증성 골절 RR 1.38, 고관절 골절 1.68.",
+      "확인수준": "검색 요약으로 확인. PMID는 원문에서 확인 필요"
+    },
+    {
+      "id": "E037",
+      "citation": "Choi HK, Atkinson K, Karlson EW, Willett W, Curhan G. Alcohol intake and risk of incident gout in men: a prospective study. Lancet. 2004;363(9417):1277-1281.",
+      "pmid": "15094272",
+      "url": "https://www.qxmd.com/r/15094272",
+      "연구설계": "전향적 코호트",
+      "핵심내용": "맥주가 통풍 위험과 가장 강하게 관련(하루 1회 제공량당 RR 1.49, 1.32-1.70). 증류주 1.15, 와인 1.04(유의하지 않음).",
+      "확인수준": "검색 요약으로 확인"
+    },
+    {
+      "id": "E038",
+      "citation": "Choi HK, Curhan G. Soft drinks, fructose consumption, and the risk of gout in men: prospective cohort study. BMJ. 2008;336(7639):309-312.",
+      "pmid": "18244959",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18244959/",
+      "연구설계": "전향적 코호트",
+      "핵심내용": "가당 탄산음료 하루 2회 이상 섭취 시 통풍 위험 RR 1.85(1.08-3.16). 다이어트 음료는 관련 없음.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E039",
+      "citation": "McMahon EJ, Campbell KL, Bauer JD, et al. Altered dietary salt intake for people with chronic kidney disease. Cochrane Database Syst Rev (2015; 2021 개정, CD010070).",
+      "pmid": "",
+      "url": "https://www.cochrane.org/CD010070",
+      "연구설계": "무작위 시험의 체계적 문헌고찰",
+      "핵심내용": "CKD 환자에서 소금을 줄이면 수축기 -8.75, 이완기 -3.70 mmHg(2015년판, 8개 시험 258명). 시험 기간이 1~36주로 짧아 사망·신기능 악화 같은 장기 결과는 평가하지 못함.",
+      "확인수준": "검색 요약으로 확인. 수치는 2015년판 기준이며 2021년 개정판의 수치는 확인하지 못함"
+    },
+    {
+      "id": "E040",
+      "citation": "Ikizler TA, Burrowes JD, Byham-Gray LD, et al. KDOQI Clinical Practice Guideline for Nutrition in CKD: 2020 Update. Am J Kidney Dis. 2020;76(3 Suppl 1):S1-S107.",
+      "pmid": "",
+      "url": "https://www.hal.inserm.fr/inserm-03246093",
+      "연구설계": "진료지침 (GRADE)",
+      "핵심내용": "대사적으로 안정된 CKD 3~5기(비투석)에 단백질 제한을 권고(1A). 칼륨은 고칼륨혈증이 교정되지 않을 때 식이 제한을 권함.",
+      "확인수준": "단백질 권고 등급(1A)은 2차 문헌으로 확인. 칼륨·인·나트륨 권고의 문구와 등급은 확인하지 못함"
+    },
+    {
+      "id": "E041",
+      "citation": "Blanco Mejia S, Messina M, Li SS, et al. A Meta-Analysis of 46 Studies Identified by the FDA Demonstrates that Soy Protein Decreases Circulating LDL and Total Cholesterol Concentrations in Adults. J Nutr. 2019;149(6):968-981.",
+      "pmid": "31006811",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31006811/",
+      "연구설계": "무작위 시험 메타분석 (43개)",
+      "핵심내용": "콩 단백질 하루 약 25 g은 LDL을 4.76 mg/dL(약 3~4%) 낮춤. 이질성 중간(I²=55%).",
+      "확인수준": "검색 요약으로 확인. 공저자 중 대두 산업 단체 소속이 있음. 생선에 대한 근거는 이 작업에서 확인하지 않음"
+    },
+    {
+      "id": "E042",
+      "citation": "Lajous M, Bijon A, Fagherazzi G, et al. Processed and unprocessed red meat consumption and hypertension in women. Am J Clin Nutr. 2014;100(3):948-952.",
+      "pmid": "25080454",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25080454/",
+      "연구설계": "전향적 코호트 (프랑스 여성 44,616명)",
+      "핵심내용": "가공육 주 5회 이상 섭취 시 고혈압 발생 HR 1.17(1.09-1.26). 가공하지 않은 적색육은 관련 없음.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E043",
+      "citation": "Violi F, Lip GY, Pignatelli P, Pastori D. Interaction Between Dietary Vitamin K Intake and Anticoagulation by Vitamin K Antagonists: Is It Really True? A Systematic Review. Medicine (Baltimore). 2016;95(10):e2895.",
+      "pmid": "",
+      "url": "https://iris.uniroma1.it/handle/11573/932590",
+      "연구설계": "체계적 문헌고찰",
+      "핵심내용": "근거가 엇갈림. 비타민 K 섭취를 제한하는 것은 항응고 조절을 개선하는 타당한 전략으로 보이지 않으며, 섭취량의 큰 변화를 피하고 일정하게 유지하는 것이 더 적절할 수 있다고 결론.",
+      "확인수준": "검색 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E044",
+      "citation": "Neuvonen PJ, Kivistö KT, Lehto P. Interference of dairy products with the absorption of ciprofloxacin. Clin Pharmacol Ther. 1991;50(5 Pt 1):498-502.",
+      "pmid": "1934862",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1934862/",
+      "연구설계": "무작위 교차시험 (건강한 지원자 7명)",
+      "핵심내용": "우유나 요거트와 함께 복용하면 시프로플록사신의 생체이용률(AUC)이 30~36% 감소. 최고 농도는 우유 36%, 요거트 47% 감소.",
+      "확인수준": "PubMed 초록 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E045",
+      "citation": "Jonkman JH, Sollie FA, Sauter R, Steinijans VW. The influence of caffeine on the steady-state pharmacokinetics of theophylline. Clin Pharmacol Ther. 1991;49(3):248-255.",
+      "pmid": "",
+      "url": "https://zendy.io/title/10.1038/clpt.1991.24",
+      "연구설계": "교차시험 (건강한 지원자 8명)",
+      "핵심내용": "카페인(300 mg 하루 3회) 병용 시 테오필린 청소율이 29% 감소하고 정상상태 농도가 23% 상승.",
+      "확인수준": "검색 요약으로 확인. 공저자 명단은 원문에서 확인 필요"
+    },
+    {
+      "id": "E046",
+      "citation": "U.S. Food and Drug Administration. Over-the-Counter Drug Products Containing Analgesic/Antipyretic Active Ingredients for Internal Use; Required Alcohol Warning. Final rule. Fed Regist. 1998;63(205):56789.",
+      "pmid": "",
+      "url": "https://www.govinfo.gov/content/pkg/FR-1998-10-23/html/98-28520.htm",
+      "연구설계": "규제기관 규정",
+      "핵심내용": "하루 3잔 이상 술을 마시는 사람은 복용 전 의사와 상의하라는 경고를 모든 일반의약품 진통·해열제에 의무화. 과음자는 아세트아미노펜의 간독성, 아스피린·이부프로펜·나프록센의 위장관 출혈 위험이 높다는 자문위 결론에 근거. 2009년 장기별 경고 규정으로 대체.",
+      "확인수준": "검색 요약으로 확인"
+    },
+    {
+      "id": "E047",
+      "citation": "Kaufman DW, Kelly JP, Wiholm BE, et al. The risk of acute major upper gastrointestinal bleeding among users of aspirin and ibuprofen at various levels of alcohol consumption. Am J Gastroenterol. 1999;94(11):3189-3196.",
+      "pmid": "10566713",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10566713/",
+      "연구설계": "환자-대조군 연구",
+      "핵심내용": "음주량이 많을수록 상부위장관 출혈 위험이 증가(주 21잔 이상 RR 2.8). 아스피린은 모든 음주 수준에서 위험을 높였고, 이부프로펜 자료는 제한적.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E048",
+      "citation": "Effects of ranitidine on blood alcohol levels after ethanol ingestion. Comparison with other H2-receptor antagonists. JAMA. 1992.",
+      "pmid": "1727201",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1727201/",
+      "연구설계": "소규모 임상 연구",
+      "핵심내용": "라니티딘이 혈중 알코올 최고 농도를 34%, AUC를 41% 올림. 시메티딘은 더 크고 파모티딘은 영향 없음. 임상적 의미는 작다는 반론이 있음.",
+      "확인수준": "검색 요약으로 확인. 저자·권·쪽수는 확인하지 못함"
+    },
+    {
+      "id": "E049",
+      "citation": "Shishtar E, Sievenpiper JL, Djedovic V, et al. The effect of ginseng (the genus Panax) on glycemic control: a systematic review and meta-analysis of randomized controlled clinical trials. PLoS One. 2014;9(9):e107391.",
+      "pmid": "25265315",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25265315/",
+      "연구설계": "무작위 시험 16개의 메타분석",
+      "핵심내용": "인삼은 공복혈당을 0.31 mmol/L 낮춤(작은 효과). HbA1c에는 유의한 효과 없음. 대부분 12주 미만.",
+      "확인수준": "PubMed 초록 요약으로 확인. 당뇨약과 병용 시 저혈당을 본 연구가 아님"
+    },
+    {
+      "id": "E050",
+      "citation": "Qin P, Zhang M, Han M, et al. Fried-food consumption and risk of cardiovascular disease and all-cause mortality: a meta-analysis of observational studies. Heart. 2021;107(19):1567-1575.",
+      "pmid": "",
+      "url": "https://heart.bmj.com/content/107/19/1567.long",
+      "연구설계": "관찰 연구 17개의 메타분석",
+      "핵심내용": "튀김 섭취 최고군은 최저군보다 주요 심혈관 사건 위험이 28% 높았다(RR 1.28, 1.15-1.43). 이질성이 큼(I²=82%). 심혈관 사망·전체 사망과는 관련 없음.",
+      "확인수준": "검색 요약으로 확인. 공저자 명단은 원문에서 확인 필요"
+    },
+    {
+      "id": "E051",
+      "citation": "Kalantar-Zadeh K, Gutekunst L, Mehrotra R, et al. Understanding sources of dietary phosphorus in the treatment of patients with chronic kidney disease. Clin J Am Soc Nephrol. 2010;5(3):519-530.",
+      "pmid": "20093346",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20093346/",
+      "연구설계": "종설",
+      "핵심내용": "식품첨가물의 인은 식품 중 함량에 비해 인 부담이 불균형적으로 크다. 무기 인 첨가물은 자연식품의 유기 인(흡수율 40~60%)보다 훨씬 잘 흡수된다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 흡수율 수치는 다른 문헌 기준"
+    },
+    {
+      "id": "E052",
+      "citation": "Bolland MJ, Grey A, Avenell A. Effects of vitamin D supplementation on musculoskeletal health: a systematic review, meta-analysis, and trial sequential analysis. Lancet Diabetes Endocrinol. 2018;6(11):847-858.",
+      "pmid": "30293909",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30293909/",
+      "연구설계": "무작위 시험 81개(약 53,500명)의 메타분석",
+      "핵심내용": "비타민 D 보충은 전체 골절(RR 1.00), 고관절 골절, 낙상에 효과가 없었고 골밀도에도 임상적으로 의미 있는 효과가 없었다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 권·쪽수는 원문에서 확인 필요"
+    },
+    {
+      "id": "E053",
+      "citation": "American Diabetes Association. Standards of Care in Diabetes—2025 (NIDDK 요약: Changes to the Standards of Care in Diabetes—2025).",
+      "pmid": "",
+      "url": "https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/changes-standards-care-diabetes2025",
+      "연구설계": "진료지침",
+      "핵심내용": "2025년판에서 영양·비영양 감미 음료 대신 물을 마실 것을 강하게 권고하는 항목이 추가됨.",
+      "확인수준": "NIDDK 요약으로 확인. 권고의 근거등급과 첨가당 관련 문구는 확인하지 못함"
+    },
+    {
+      "id": "E054",
+      "citation": "Gillman PK. A reassessment of the safety profile of monoamine oxidase inhibitors: elucidating tired old tyramine myths. J Neural Transm. 2018;125(11):1707-1717.",
+      "pmid": "",
+      "url": "https://link.springer.com/10.1007/s00702-018-1932-y",
+      "연구설계": "서술적 종설",
+      "핵심내용": "MAO억제제의 티라민 위험은 과대평가되어 왔다고 주장. 숙성 치즈 상당수는 티라민이 적고(10 mg/kg 미만), 함량이 높은 치즈도 50 g 이상 먹어야 문제가 된다는 관련 문헌.",
+      "확인수준": "초록과 관련 문헌 요약으로 확인. 치즈 수치는 같은 저자의 다른 글 기준"
     }
   ]
 }

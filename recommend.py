@@ -70,6 +70,17 @@ def _apply_supplement():
         add = [t for t in extra_tags.get(m.get("menu_id"), []) if t not in m.get("food_tag", "").split("|")]
         if add:
             m["food_tag"] = "|".join([m.get("food_tag", "")] + add)
+    # 원본 규칙의 문헌 검토 결과(data/rule_review.json): 검토한 근거수준을 덧씌운다.
+    # 원본 값은 rule_review.json 의 '원본_근거수준'과 원본 규칙 파일에 그대로 남아 있다.
+    review = _load("rule_review.json")
+    reviewed = {x["id"]: x for x in review["disease_rules"] + review["drug_rules"]}
+    for rule in DISEASE_RULES:
+        if rule["rule_id"] in reviewed:
+            rule["근거수준"] = reviewed[rule["rule_id"]]["검토_근거수준"]
+    for rule in DRUG_RULES:
+        if rule["drug_rule_id"] in reviewed:
+            rule["근거수준"] = reviewed[rule["drug_rule_id"]]["검토_근거수준"]
+    supp["_review"] = reviewed
     return supp
 
 
