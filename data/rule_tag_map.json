@@ -1,0 +1,42 @@
+{
+  "_설명": [
+    "규칙과 메뉴 food_tag를 잇는 명시적 매핑. 규칙 본문은 data/*_rules.json(원본 xlsx에서 변환)에 그대로 두고, 연결 정보만 이 파일에 둔다.",
+    "원칙 1: 규칙의 식품군이 태그와 같은 범위일 때만 연결한다. 태그가 규칙보다 넓으면 연결하지 않고 키워드 매칭에만 맡긴다.",
+    "        예) R013 '가공육'에 PROCESSED(가공식품 전반)를 연결하면 김치찌개까지 걸리므로 연결하지 않는다.",
+    "        예) R012 '고지방 육류'에 SAT_FAT_POSSIBLE을 연결하면 치즈케이크에 육류 문구가 붙으므로 연결하지 않는다.",
+    "원칙 2: 여기 없는 규칙은 태그로는 매칭하지 않는다(메뉴명 키워드로만 매칭).",
+    "원칙 3: 메뉴 하나만 보고 판단할 수 없는 규칙(R010 탄수화물 중복 조합, R030 고기 추가 옵션)은 연결하지 않는다."
+  ],
+  "disease_rules": {
+    "R001": ["SOUP", "HIGH_SODIUM_POSSIBLE"],
+    "R002": ["SAUCE"],
+    "R004": ["PROCESSED"],
+    "R005": ["VEGETABLE"],
+    "R006": ["SUGAR_SWEETENED_BEVERAGE"],
+    "R008": ["ADDED_SUGAR"],
+    "R009": ["REFINED_CARB", "CARB", "RICE", "NOODLE"],
+    "R011": ["VEGETABLE", "SEAWEED"],
+    "R012": ["SAT_FAT", "RED_MEAT"],
+    "R014": ["FRIED"],
+    "R015": ["CREAM_OR_SAUCE", "CHEESE"],
+    "R018": ["VEGETABLE", "SEAWEED"],
+    "R021": ["ALCOHOL"],
+    "R023": ["RED_MEAT", "HIGH_PURINE"],
+    "R024": ["SEAFOOD"],
+    "R025": ["ALCOHOL"],
+    "R026": ["SUGAR_SWEETENED_BEVERAGE"],
+    "R028": ["SOUP", "HIGH_SODIUM_POSSIBLE"],
+    "R029": ["POTASSIUM_HIGH"],
+    "R031": ["PROCESSED"],
+    "R032": ["FRIED", "CREAM_OR_SAUCE", "SAT_FAT", "SAT_FAT_POSSIBLE", "SUGAR_SWEETENED_BEVERAGE", "ADDED_SUGAR"]
+  },
+  "_약물규칙_설명": [
+    "약물 규칙은 원본에 food_tag 열이 있지만, 일부 태그 이름이 메뉴사전의 태그 이름과 달라 매칭되지 않았다.",
+    "아래는 약물 규칙의 태그에 '추가로' 인정할 메뉴 태그다. 규칙의 키워드 예시에 해당 식품이 명시된 경우만 넣었다."
+  ],
+  "drug_rules_extra": {
+    "DR008": ["SOY", "SEAWEED", "CAFFEINE", "DAIRY_POSSIBLE"],
+    "DR010": ["DAIRY_POSSIBLE"],
+    "DR011": ["DAIRY_POSSIBLE"]
+  }
+}
