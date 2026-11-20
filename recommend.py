@@ -52,6 +52,30 @@ _TAG_MAP = _load("rule_tag_map.json")
 DISEASE_RULE_TAGS = _TAG_MAP["disease_rules"]
 DRUG_RULE_EXTRA_TAGS = _TAG_MAP["drug_rules_extra"]
 
+
+def _apply_supplement():
+    """문헌 근거로 추가·수정한 내용(data/rules_supplement.json)을 원본 데이터 위에 덧씌운다.
+    원본 파일은 수정하지 않으므로 어떤 규칙이 원본이고 어떤 규칙이 보완인지 추적할 수 있다."""
+    supp = _load("rules_supplement.json")
+    DISEASE_RULES.extend(supp.get("disease_rules_add", []))
+    DRUG_DICT.extend(supp.get("drug_dictionary_add", []))
+    DRUG_RULES.extend(supp.get("drug_rules_add", []))
+    overrides = supp.get("drug_rules_override", {})
+    for rule in DRUG_RULES:
+        for key, value in overrides.get(rule["drug_rule_id"], {}).items():
+            if not key.startswith("_"):      # "_변경이유" 같은 설명 필드는 규칙에 넣지 않는다
+                rule[key] = value
+    extra_tags = supp.get("menu_tags_add", {})
+    for m in MENU:
+        add = [t for t in extra_tags.get(m.get("menu_id"), []) if t not in m.get("food_tag", "").split("|")]
+        if add:
+            m["food_tag"] = "|".join([m.get("food_tag", "")] + add)
+    return supp
+
+
+SUPPLEMENT = _apply_supplement()
+EVIDENCE = {e["id"]: e for e in _load("evidence_sources.json")["sources"]}
+
 BASE_SCORE = 10
 # 점수는 등급 안에서의 정렬과 설명을 위한 데모용 값이다(임상적으로 보정된 값이 아님).
 LIMIT_WEIGHT = {"HIGH": -5, "MEDIUM": -3}
@@ -147,7 +171,9 @@ def evaluate_menu(menu_row, profile):
             action = rule.get("action")
             matched, basis, by_kw = match_rule(
                 rule["rule_id"], rule.get("푸드코트 키워드 예시", ""),
-                DISEASE_RULE_TAGS.get(rule["rule_id"], []), menu_row)
+                DISEASE_RULE_TAGS.get(rule["rule_id"], [])
+                + [t.strip() for t in rule.get("food_tag", "").split("|") if t.strip()],   # 보완 규칙은 태그를 직접 가짐
+                menu_row)
             if not matched:
                 continue
             if action == "CONDITIONAL_LIMIT":

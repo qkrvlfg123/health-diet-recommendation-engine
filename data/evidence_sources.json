@@ -1,0 +1,144 @@
+{
+  "_설명": [
+    "보완 규칙(rules_supplement.json)의 근거 문헌 목록.",
+    "확인수준: 이 작업에서 실제로 확인한 범위를 적었다. 전문을 읽은 것이 아니라 PubMed 초록·검색 요약으로 확인한 경우가 대부분이므로, 인용 전에 원문 대조가 필요하다.",
+    "연구설계를 함께 적은 이유: 관찰 연구·증례 보고·전문가 권고는 근거의 무게가 다르고, 그에 따라 규칙의 근거수준을 정했기 때문이다."
+  ],
+  "sources": [
+    {
+      "id": "E001",
+      "citation": "Vincent J, Harris SI, Foulds G, et al. Lack of effect of grapefruit juice on the pharmacokinetics and pharmacodynamics of amlodipine. Br J Clin Pharmacol. 2000;50(5):455-463.",
+      "pmid": "11069440",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11069440/",
+      "연구설계": "건강한 남성 20명, 무작위 위약대조 4원 교차시험 (암로디핀 10 mg 단회)",
+      "핵심내용": "자몽주스와 함께 복용해도 암로디핀의 약동학·혈압 반응에 의미 있는 변화가 없었다. 다른 디하이드로피리딘계에서 보이는 생체이용률 증가가 암로디핀에서는 나타나지 않았다.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E002",
+      "citation": "Josefsson M, Zackrisson AL, Ahlner J. Effect of grapefruit juice on the pharmacokinetics of amlodipine in healthy volunteers. Eur J Clin Pharmacol. 1996;51(2):189-193.",
+      "pmid": "8911887",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8911887/",
+      "연구설계": "건강한 지원자 교차시험 (암로디핀 5 mg)",
+      "핵심내용": "자몽주스 병용 시 Cmax 약 15%, AUC 약 16% 증가. 임상적 의미는 작지만 개인차가 있어 상호작용을 완전히 배제할 수는 없다는 입장.",
+      "확인수준": "검색 요약으로 확인 (수치는 2차 요약 기준)"
+    },
+    {
+      "id": "E003",
+      "citation": "Bailey DG, Dresser G, Arnold JMO. Grapefruit-medication interactions: forbidden fruit or avoidable consequences? CMAJ. 2013;185(4):309-316.",
+      "pmid": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3589309/",
+      "연구설계": "종설",
+      "핵심내용": "자몽은 생과·주스·농축액 모두 장의 CYP3A4를 억제한다. 85개 이상 약물이 상호작용 가능성이 있고 43개는 심각한 이상반응 가능.",
+      "확인수준": "검색 요약으로 확인. 약물별 위험도 표(Table 1)는 열람하지 못해, 스타틴·칼슘채널차단제의 개별 약물 등급은 이 작업에서 확인하지 못함"
+    },
+    {
+      "id": "E004",
+      "citation": "Food and herbal interactions with oral anticoagulants: systematic search of randomized trials (2024 review; PMID 39288907).",
+      "pmid": "39288907",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39288907/",
+      "연구설계": "무작위 시험 대상 체계적 검색 종설",
+      "핵심내용": "크랜베리주스는 하루 약 240 mL까지 와파린과 함께 섭취해도 안전한 것으로 보인다. 더 큰 무작위 시험이 필요하다고 결론.",
+      "확인수준": "검색 요약으로 확인. 저자·학술지 등 서지사항은 원문에서 확인 필요"
+    },
+    {
+      "id": "E005",
+      "citation": "Interaction between warfarin and cranberry juice (2007 review; PMID 17919554).",
+      "pmid": "17919554",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17919554/",
+      "연구설계": "종설",
+      "핵심내용": "와파린–크랜베리 상호작용 우려는 주로 증례 보고에 근거하며, 인과관계의 근거로는 약하다. 하루 250 mL를 7일간 마신 시험에서 INR에 유의한 변화가 없었다.",
+      "확인수준": "검색 요약으로 확인. 서지사항은 원문에서 확인 필요"
+    },
+    {
+      "id": "E006",
+      "citation": "Cahill LE, Pan A, Chiuve SE, et al. Fried-food consumption and risk of type 2 diabetes and coronary artery disease: a prospective study in 2 cohorts of US women and men. Am J Clin Nutr. 2014;100(2):667-675.",
+      "pmid": "",
+      "url": "https://doi.org/10.3945/ajcn.114.084129",
+      "연구설계": "전향적 코호트 2개 (여성 약 70,800명, 남성 약 40,800명)",
+      "핵심내용": "튀김 섭취 빈도가 높을수록 제2형 당뇨병 발생 위험이 높았다 (주 1회 미만 대비 주 1~3회 1.15, 4~6회 1.39, 7회 이상 1.55). 고혈압·고콜레스테롤혈증·BMI를 추가 보정하면 연관성이 크게 약해졌다.",
+      "확인수준": "초록·2차 요약으로 확인. 당뇨병 '발생' 연구이며, 이미 당뇨병이 있는 사람의 관리 효과를 본 연구가 아님"
+    },
+    {
+      "id": "E007",
+      "citation": "Klop B, do Rego AT, Cabezas MC. Alcohol and plasma triglycerides. Curr Opin Lipidol. 2013;24(4):321-326.",
+      "pmid": "23511381",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23511381/",
+      "연구설계": "서술적 종설",
+      "핵심내용": "알코올과 중성지방은 J자형 관계. 알코올은 VLDL 분비 증가와 지방분해 저하로 고중성지방혈증을 유발하며 비만에서 더 심해진다. 고중성지방혈증이 있으면 음주를 줄이거나 중단하도록 권고.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E008",
+      "citation": "Sacks FM, Lichtenstein AH, Wu JHY, et al. Dietary Fats and Cardiovascular Disease: A Presidential Advisory From the American Heart Association. Circulation. 2017;136(3):e1-e23.",
+      "pmid": "28620111",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28620111/",
+      "연구설계": "학회 권고문 (무작위 시험 종합)",
+      "핵심내용": "포화지방은 LDL 콜레스테롤을 올린다. 포화지방을 다불포화 식물성 기름으로 대체한 무작위 시험에서 심혈관질환이 약 30% 감소. 정제 탄수화물로 대체하면 이득이 없었다.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E009",
+      "citation": "Choi HK, Atkinson K, Karlson EW, Willett W, Curhan G. Purine-rich foods, dairy and protein intake, and the risk of gout in men. N Engl J Med. 2004;350(11):1093-1103.",
+      "pmid": "15014182",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15014182/",
+      "연구설계": "전향적 코호트 (남성 47,150명, 12년 추적, 통풍 730건)",
+      "핵심내용": "육류(최고 5분위 RR 1.41)와 해산물(RR 1.51)은 통풍 위험을 높였다. 퓨린이 많은 채소와 총단백질 섭취는 위험 증가와 관련이 없었다. 유제품은 위험을 낮췄다.",
+      "확인수준": "PubMed 초록 요약으로 확인. 해조류를 따로 분석한 결과는 확인하지 못함"
+    },
+    {
+      "id": "E010",
+      "citation": "FitzGerald JD, Dalbeth N, Mikuls T, et al. 2020 American College of Rheumatology Guideline for the Management of Gout. Arthritis Care Res (Hoboken). 2020;72(6):744-760.",
+      "pmid": "",
+      "url": "https://doi.org/10.1002/acr.24180",
+      "연구설계": "진료지침",
+      "핵심내용": "모든 통풍 환자에게 알코올·퓨린·고과당 옥수수시럽 섭취 제한을 조건부 권고 (근거 확실성: 알코올 낮음, 퓨린 낮음, 고과당시럽 매우 낮음).",
+      "확인수준": "지침 표와 2차 요약으로 확인"
+    },
+    {
+      "id": "E011",
+      "citation": "American Diabetes Association Professional Practice Committee. 5. Facilitating Positive Health Behaviors and Well-being to Improve Health Outcomes: Standards of Care in Diabetes. Diabetes Care (연간 개정).",
+      "pmid": "39651983",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39651983/",
+      "연구설계": "진료지침 (해당 권고의 근거등급 E = 전문가 합의)",
+      "핵심내용": "음주는 지연성 저혈당 위험을 높일 수 있으며, 인슐린이나 인슐린 분비 촉진제(설폰요소제 등)를 쓰는 경우 특히 그렇다. 지연성 저혈당의 인지와 대처 교육이 필요하다.",
+      "확인수준": "지침 발췌본(연도 미상)으로 확인. 최신판 문구는 원문 대조 필요. 메트포르민–알코올(젖산산증)은 2차 자료로만 확인"
+    },
+    {
+      "id": "E012",
+      "citation": "Colchicine tablets — US prescribing information (DailyMed / FDA label), Dosage and Administration 2.4 및 Drug Interactions.",
+      "pmid": "",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d92b7189-78fd-693d-e053-2a95a90a7c73",
+      "연구설계": "의약품 허가사항",
+      "핵심내용": "콜히친은 CYP3A4와 P-당단백의 기질. 자몽주스는 중등도 CYP3A4 억제제로 분류되어 콜히친 혈중 농도를 유의하게 올릴 수 있으며 용량 조절 대상으로 표에 올라 있다.",
+      "확인수준": "검색 요약으로 확인. 용량 조절 수치는 표를 직접 확인하지 못함"
+    },
+    {
+      "id": "E013",
+      "citation": "Cereda E, Barichella M, Pedrolli C, Pezzoli G. Low-protein and protein-redistribution diets for Parkinson's disease patients with motor fluctuations: a systematic review. Mov Disord. 2010;25(13):2021-2034.",
+      "pmid": "20669318",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20669318/",
+      "연구설계": "체계적 문헌고찰 (16개 연구, 이질성 큼)",
+      "핵심내용": "저단백 식이를 지지할 근거는 부족하다. 단백질 재분배 식이(단백질을 저녁으로 옮김)는 운동 기능 개선 반응이 좋았으나 장기 순응도가 떨어졌다.",
+      "확인수준": "PubMed 초록 요약으로 확인"
+    },
+    {
+      "id": "E014",
+      "citation": "ACE inhibitors and ARBs: Managing potassium and renal function. Cleve Clin J Med. 2019;86(9):601-607.",
+      "pmid": "",
+      "url": "https://www.ccjm.org/content/86/9/601",
+      "연구설계": "종설",
+      "핵심내용": "ACE 억제제와 ARB는 혈중 칼륨을 올린다. 최대 10% 환자에서 경도 이상의 고칼륨혈증이 보고된다.",
+      "확인수준": "검색 요약으로 확인. 저자는 원문에서 확인 필요"
+    },
+    {
+      "id": "E015",
+      "citation": "Tools for Practice #163: Blood pressure medications and electrolytes. College of Family Physicians of Canada.",
+      "pmid": "",
+      "url": "https://cfpclearn.ca/tfp163/",
+      "연구설계": "근거 요약(1차 진료용)",
+      "핵심내용": "티아지드 이뇨제 사용자 약 4%에서 저칼륨혈증(<3.2 mmol/L)이 발생한다. 즉 티아지드는 칼륨을 올리는 것이 아니라 낮춘다.",
+      "확인수준": "검색 요약으로 확인"
+    }
+  ]
+}

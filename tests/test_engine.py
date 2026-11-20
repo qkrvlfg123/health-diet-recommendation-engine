@@ -70,7 +70,9 @@ def test_allergy_is_hard_exclusion():
 def test_grapefruit_with_amlodipine_and_diabetes_double_penalty():
     e = ev("자몽에이드", diseases=["당뇨병"], drug_ids=["RX002"])
     assert {"R006", "DR003"} <= sources(e)
-    assert e["score"] == r.BASE_SCORE - 5 - 6
+    # 당뇨 가당음료 HIGH(-5) + 암로디핀–자몽 MEDIUM(-3).
+    # 암로디핀은 자몽의 영향이 작다는 교차시험 결과(E001)에 따라 원본의 HIGH에서 MEDIUM으로 조정했다.
+    assert e["score"] == r.BASE_SCORE - 5 - 3
 
 
 def test_warfarin_rules_match():
@@ -115,6 +117,49 @@ def test_limit_and_recommend_both_shown():
     e = ev("비빔밥", diseases=["고혈압"])      # 양념(R002) 제한 + 채소(R005) 권장
     kinds = [x["kind"] for x in e["reasons"]]
     assert "LIMIT" in kinds and "RECOMMEND" in kinds and e["tier"] == "CAUTION"
+
+
+# ---------------------------------------------------------------- 문헌 근거 보완 규칙
+
+def test_supplement_rules_fill_former_gaps():
+    """v3에서 '대응 규칙 없음'으로 남겼던 조합이 보완 규칙으로 잡히는지."""
+    assert "R033" in sources(ev("후라이드치킨", diseases=["당뇨병"]))          # 튀김–당뇨 (E006)
+    assert "R034" in sources(ev("맥주", diseases=["이상지질혈증"]))            # 알코올–중성지방 (E007)
+    assert "R035" in sources(ev("치즈버거세트", diseases=["이상지질혈증"]))    # 포화지방 (E008)
+    assert "DR018" in sources(ev("맥주", drug_ids=["RX008"]))                  # 알코올–당뇨약 (E011)
+    assert "DR019" in sources(ev("맥주", drug_ids=["RX017"]))                  # 알코올–통풍 (E010)
+    assert "DR020" in sources(ev("자몽에이드", drug_ids=["RX017"]))            # 자몽–콜히친 (E012)
+
+
+def test_levodopa_protein_is_timing_advice():
+    """파킨슨약–고단백 식사는 제한이 아니라 복용 시간 조절(E013). 감점하지 않는다."""
+    e = ev("삼겹살구이", drug_ids=["RX006"])
+    assert [x["kind"] for x in e["reasons"]] == ["DRUG_TIMING"] and e["score"] == r.BASE_SCORE
+
+
+def test_no_rule_created_without_evidence():
+    """미역국–통풍: 문헌 검토 결과 근거가 없어 규칙을 만들지 않았다(E009)."""
+    assert not any(x["kind"] == "LIMIT" for x in ev("미역국", diseases=["통풍"])["reasons"])
+
+
+def test_grape_is_not_grapefruit():
+    """원본 DR003 키워드의 '포도주스'·'레몬에이드'는 자몽이 아니므로 제거했다."""
+    rule = next(x for x in r.DRUG_RULES if x["drug_rule_id"] == "DR003")
+    assert "포도" not in rule["푸드코트 키워드 예시"] and "레몬" not in rule["푸드코트 키워드 예시"]
+    assert r.keyword_hit(rule["푸드코트 키워드 예시"], "포도주스") is None
+
+
+def test_every_supplement_item_cites_existing_evidence():
+    """보완한 규칙·수정 사항은 모두 evidence_sources.json의 문헌을 가리켜야 한다."""
+    s = r.SUPPLEMENT
+    items = s["disease_rules_add"] + s["drug_rules_add"] + list(s["drug_rules_override"].values())
+    for it in items:
+        ids = [i for i in it["source_id"].split("|") if i.startswith("E")]
+        assert ids, it
+        for i in ids:
+            assert i in r.EVIDENCE, i
+    for it in s["rules_not_created"]:
+        assert it["이유"] and all(i in r.EVIDENCE for i in it["source_id"].split("|") if i)
 
 
 # ---------------------------------------------------------------- 데이터 정합성
