@@ -77,6 +77,8 @@ def _apply_supplement():
     for rule in DISEASE_RULES:
         if rule["rule_id"] in reviewed:
             rule["근거수준"] = reviewed[rule["rule_id"]]["검토_근거수준"]
+            # 문헌이 규칙 자체를 뒷받침하지 않아 '적용 중지'로 판정된 규칙 (삭제하지 않고 표시만 한다)
+            rule["_inactive"] = reviewed[rule["rule_id"]].get("적용") is False
     for rule in DRUG_RULES:
         if rule["drug_rule_id"] in reviewed:
             rule["근거수준"] = reviewed[rule["drug_rule_id"]]["검토_근거수준"]
@@ -177,7 +179,7 @@ def evaluate_menu(menu_row, profile):
     for disease in profile.diseases:
         limits, recos = [], []
         for rule in DISEASE_RULES:
-            if rule.get("질환명") != disease:
+            if rule.get("질환명") != disease or rule.get("_inactive"):
                 continue
             action = rule.get("action")
             matched, basis, by_kw = match_rule(

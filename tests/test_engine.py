@@ -214,6 +214,11 @@ def test_review_verdicts_are_consistent():
     review = r._load("rule_review.json")
     for x in review["disease_rules"] + review["drug_rules"]:
         diff = rank[x["검토_근거수준"]] - rank[x["원본_근거수준"]]
+        if x["판정"] == "적용 중지":
+            assert x.get("적용") is False and x["source_id"], x["id"]
+            continue
+        assert x["판정"] in ("유지", "상향", "하향"), x["id"]
+        assert x["source_id"], f"{x['id']}: 모든 규칙에 근거 문헌이 연결되어야 한다"
         expected = {"상향": 1, "하향": -1}.get(x["판정"], 0)
         assert diff == expected, x["id"]
         ids = [i for i in x["source_id"].split("|") if i]
@@ -227,7 +232,8 @@ def test_review_verdicts_are_consistent():
 def test_engine_uses_reviewed_levels():
     by = {x["rule_id"]: x for x in r.DISEASE_RULES}
     assert by["R005"]["근거수준"] == "HIGH"       # DASH 무작위 시험 (E029)
-    assert by["R019"]["근거수준"] == "MEDIUM"     # 식이 칼슘은 골절과 관련 없음 (E035)
+    assert by["R019"]["근거수준"] == "HIGH"       # 유제품 추가 제공 군집 무작위 시험 (E060)
+    assert by["R020"]["_inactive"] is True         # 비타민 D: 문헌이 뒷받침하지 않아 적용 중지 (E052)
     assert by["R025"]["근거수준"] == "MEDIUM"     # 통풍–알코올은 코호트·조건부 권고 (E037, E010)
 
 
