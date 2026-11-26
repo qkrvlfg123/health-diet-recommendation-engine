@@ -60,7 +60,7 @@ def test_single_char_keyword_matches_only_word_ending():
     assert r.keyword_hit("케이크", "치즈케이크") == "케이크"
 
 
-# ---------------------------------------------------------------- 핵심 동작
+# ---------------------------------------------------------------- 기본 동작
 
 def test_allergy_is_hard_exclusion():
     e = ev("된장찌개", allergen_tags=["SOY"])
